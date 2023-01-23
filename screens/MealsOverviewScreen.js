@@ -6,6 +6,8 @@ import MealItem from "../components/MealItem";
 const MealsOverviewScreen = ({ route, navigation }) => {
   const { categoryId } = route.params;
 
+
+
   const displayedMeals = MEALS.filter((mealItem) => {
     return mealItem.categoryIds.indexOf(categoryId) >= 0;
   });
@@ -19,13 +21,17 @@ const MealsOverviewScreen = ({ route, navigation }) => {
     });
   }, [categoryId, navigation]);
 
+  
   function renderMealItem({ item }) {
+   
     const mealItemProps = {
+      id: item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       duration: item.duration,
       complexity: item.complexity,
       affordability: item.affordability,
+
     };
     return <MealItem {...mealItemProps} />;
   }
@@ -48,4 +54,4 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
-});
+})
