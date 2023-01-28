@@ -5,9 +5,9 @@ import { MEALS } from '../data/dummy-data'
 import { useSelector } from 'react-redux'
 
 const FavoritesScreen = () => {
-  const favoriteMealsRedux = useSelector((state) => state.favoriteMeals.ids) 
+  const favoriteMealIds = useSelector((state) => state.favoriteMeals.ids) 
 
-  const favoriteMeals = MEALS.filter(meal => favoriteMealsRedux.includes(meal.id));
+  const favoriteMeals = MEALS.filter(meal => favoriteMealIds.includes(meal.id));
 
   if (favoriteMeals.length === 0) {
     return (
