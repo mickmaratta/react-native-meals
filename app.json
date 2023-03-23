@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "react-native-meals",
+    "name": "My Recipe Book",
     "slug": "react-native-meals",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,16 +19,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1.0.0",
+      "bundleIdentifier": "com.mickmaratta.reactnativemeals"
     },
     "android": {
       "adaptiveIcon": {
+        "versionCode": 1,
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "118c571d-b794-4277-a433-1e40e8733a2b"
+      }
     }
   }
 }
